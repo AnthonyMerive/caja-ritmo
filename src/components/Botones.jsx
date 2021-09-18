@@ -4,6 +4,7 @@ export default function Botones(props) {
 
     const [activo, setActivo] = useState(false)
     const volumen = props.volumen
+    const sonido = props.sonido
  
     useEffect(() => {
 
@@ -15,7 +16,7 @@ export default function Botones(props) {
         
         }
 
-    }, [volumen])
+    }, [volumen, sonido])
 
     const handleTecla = (e) =>{
         e.keyCode === props.sonido.keyCode &&
