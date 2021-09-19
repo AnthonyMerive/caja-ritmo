@@ -21,8 +21,6 @@ export default function Botones(props) {
     const handleTecla = (e) =>{
         e.keyCode === props.sonido.keyCode &&
             handleReproducir();
-            
- 
     }
     
     const handleReproducir = () => {
@@ -32,6 +30,7 @@ export default function Botones(props) {
         rep.volume = volumen;
         rep.play();
         setTimeout(()=> setActivo(false), 200);
+        props.setTecla(`${props.sonido.id}`);
     }
 
 
